@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Зникнення елемента</title>
+</head>
+<body>
+
+<div id="text">Цей текст зникне після натискання кнопки</div>
+<button id="hideTextButton">Сховати текст</button>
+
+<script>
+  document.getElementById('hideTextButton').addEventListener('click', function() {
+    document.getElementById('text').style.display = 'none';
+  });
+</script>
+
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Зникнення кнопки</title>
+</head>
+<body>
+
+<button id="hideButton">Зникни</button>
+
+<script>
+  document.getElementById('hideButton').addEventListener('click', function() {
+    this.style.display = 'none';
+  });
+</script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Дерево вузлів</title>
+  <style>
+    .nested {
+      display: none;
+    }
+    .caret {
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+<ul id="tree">
+  <li><span class="caret">Пункт 1</span>
+    <ul class="nested">
+      <li>Підпункт 1-1</li>
+      <li>Підпункт 1-2</li>
+    </ul>
+  </li>
+  <li><span class="caret">Пункт 2</span>
+    <ul class="nested">
+      <li>Підпункт 2-1</li>
+      <li>Підпункт 2-2</li>
+    </ul>
+  </li>
+</ul>
+
+<script>
+  document.querySelectorAll('.caret').forEach(function(caret) {
+    caret.addEventListener('click', function() {
+      this.parentElement.querySelector('.nested').classList.toggle('active');
+      this.classList.toggle('caret-down');
+    });
+  });
+</script>
+
+</body>
+</html>
+

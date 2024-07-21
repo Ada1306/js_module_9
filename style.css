@@ -1,0 +1,8 @@
+.caret-down::before {
+  content: "\25BC"; /* Down arrow */
+}
+.caret::before {
+  content: "\25B6"; /* Right arrow */
+  display: inline-block;
+  margin-right: 6px;
+}
